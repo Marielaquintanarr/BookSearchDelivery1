@@ -15,7 +15,60 @@ code {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: repeat(6, 1fr);  /* Esto divide el contenedor en 6 columnas */
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  gap: 10px;  /* Agrega espacio entre las celdas */
+}
+
+.container div {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+}
+
+.container .header {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.book-row {
+  display: contents; /* Mantén las celdas dentro de cada fila alineadas en el grid */
+}
+
+.search {
+  width: 230px;
+  height: 40px;
+  border-radius: 20px;
+  border-color: transparent;
+  position: relative;
+  top: -1350px;
+  left: 240px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fbf2ef;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
   padding: 10px;
   background-color: white;
   border-radius: 10px;
