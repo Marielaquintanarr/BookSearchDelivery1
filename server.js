@@ -3,14 +3,15 @@ const fs = require("fs");
 
 const app = express();
 
+// cargar los datos desde el  JSON
 const books = JSON.parse(fs.readFileSync("./books.json", "utf-8")).books;
 
 app.get("/api/books", (req, res) => {
   const query = req.query.q?.toLowerCase() || "";
+
   const librosBuscados = books.filter(book =>
-    (book.title?.toLowerCase().includes(query)) ||
-    (book.author?.toLowerCase().includes(query)) ||
-    (book.genre?.toLowerCase().includes(query)) 
+    book.title.toLowerCase().includes(query) ||
+    book.author.toLowerCase().includes(query)
   );
 
   res.json(librosBuscados);
@@ -18,6 +19,3 @@ app.get("/api/books", (req, res) => {
 
 const PORT = 5001;
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto: ${PORT}`));
-
-
-
