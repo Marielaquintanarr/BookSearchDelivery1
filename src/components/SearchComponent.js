@@ -9,14 +9,19 @@ const SearchComponent = () => {
     const fetchBooks = async () => {
       try {
         const response = await fetch(`http://localhost:5001/api/books?q=${query}`);
+        if (!response.ok) {
+          throw new Error("Error al obtener los libros");
+        }
         const data = await response.json();
         setBooks(data);
       } catch (error) {
         console.error("Error:", error);
       }
     };
+  
     fetchBooks();
   }, [query]);
+  
 
   return (
     <div>
