@@ -16,7 +16,9 @@ const DataGrid = ({ books }) => {
           <div>{book.genre}</div>
           <div>{book.published_date}</div>
           <div>{book.isbn}</div>
-          <div>{book.availability}</div>
+          <div className={`availability ${book.availability ? "available" : "unavailable"}`}>
+            {book.availability !== undefined ? (book.availability ? "Disponible" : "No disponible") : "N/A"}
+          </div>
         </div>
       ))}
     </div>
