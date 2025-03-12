@@ -10,7 +10,7 @@ npm start
 ## 2. Iniciar el Servidor
 node server.js
 
-##🌐 Acceso a la Aplicación
+## 🌐 Acceso a la Aplicación
 Una vez que ambos servicios estén en ejecución, abre tu navegador y visita:
 http://localhost:3000
 
