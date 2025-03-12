@@ -14,5 +14,5 @@ node server.js
 Una vez que ambos servicios estén en ejecución, abre tu navegador y visita:
 http://localhost:3000
 
-Ahí podrás ingresar títulos de libros para buscar información sobre ellos.
+Se puede buscar información de los libros usando su título o autor.
 
